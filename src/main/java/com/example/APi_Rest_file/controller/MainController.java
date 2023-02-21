@@ -25,6 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.example.APi_Rest_file.util.MainUtil.fillInTheData;
+import static com.example.APi_Rest_file.util.MainUtil.getHashSumFile;
 
 
 @Tag(name = "service")
@@ -58,9 +59,6 @@ public class MainController {
         body.put(MAX_VALUE, maxValue);
 
         return new ResponseEntity<>(body, HttpStatus.OK);
-    }
-
-    private long getHashSumFile(String filePath) {
     }
 
     @Operation(summary = "Getting min value from file with data.")
@@ -152,4 +150,3 @@ public class MainController {
 
     }
 }
-
